@@ -1,56 +1,34 @@
-RAG-Based Chatbot for PDFs, CSVs, and Images
-  This project is a Retrieval-Augmented Generation (RAG)-based chatbot that allows users to query information from PDFs, CSVs, and images. It retrieves relevant documents using Qdrant for vector search and processes queries using Cohere and Gemini. The frontend is built using Streamlit for an interactive user experience.
+# RAG-Based Chatbot for PDFs, CSVs, and Images
 
-Features
-  Query information from pre-uploaded PDFs (10 research papers).
+This project is a **Retrieval-Augmented Generation (RAG)-based chatbot** that allows users to query information from **PDFs, CSVs, and images**. The system retrieves relevant documents using **Qdrant** for vector search and processes queries using **Gemini and Cohere**. The frontend is built using **Streamlit**.
 
-  Analyze data from a CSV dataset with 1,000 records.
+## Features
 
-  Upload images for processing.
+- **PDF Processing**: A set of 10 research papers has been pre-uploaded for querying.
+- **CSV Data Processing**: A structured dataset with 1,000 records is available for analysis.
+- **Image Uploading**: Users can upload images for processing.
+- **Query Generation**: Uses **Cohere** to generate refined search queries.
+- **Vector Search**: Stores and retrieves document embeddings using **Qdrant**.
+- **LLM Response Generation**: Uses **Gemini** for generating answers based on retrieved documents.
+- **Frontend**: Implemented using **Streamlit** for an interactive user interface.
 
-  Use Cohere to refine user queries.
+## Tech Stack
 
-  Retrieve document embeddings using Qdrant.
+- **Python** – Backend logic and data processing
+- **Qdrant** – Vector database for efficient search
+- **Cohere** – Used for generating multiple search queries
+- **Gemini** – LLM for generating final responses
+- **Streamlit** – Web-based user interface
+- **Sentence-Transformers** – For text embeddings
 
-  Generate responses using Gemini.
+## Setup Instructions
 
-Interactive Streamlit frontend.
+### Prerequisites
 
-Tech Stack
+- Python **3.8+**
+- Qdrant running locally or on the cloud
 
-Backend: Python
-Vector Database: Qdrant
-Query Refinement: Cohere
-LLM: Gemini
-Embeddings: Sentence-Transformers
+### Install Dependencies
 
-Frontend: Streamlit
-Setup Instructions
-Prerequisites
-Python 3.8+
-
-Qdrant running locally or on the cloud
-
-Install Dependencies
+```sh
 pip install -r requirements.txt
-Running the Project
-
-Start the Streamlit frontend:
-streamlit run app.py
-The backend processes PDFs, CSVs, and images, stores them in Qdrant, and follows a two-stage RAG approach:
-
-Cohere refines user queries.
-
-Qdrant retrieves relevant document chunks.
-
-Gemini generates the final response.
-
-Future Improvements
-  Allow users to upload their own PDFs.
-
-  Improve query response time.
-
-  Implement semantic chunking for better retrieval.
-
-  Support additional file types.
-
