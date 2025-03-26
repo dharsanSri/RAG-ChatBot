@@ -32,7 +32,5 @@ This project is a **Retrieval-Augmented Generation (RAG)-based chatbot** that al
 
 ```sh
 pip install -r requirements.txt
-
-```sh
 streamlit run app.py
 
